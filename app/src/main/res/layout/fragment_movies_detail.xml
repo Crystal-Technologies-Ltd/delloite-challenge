@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ImageView
+    android:id="@+id/movieDetails_imv_back"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginStart="17dp"
+    android:layout_marginTop="10dp"
+    android:scaleType="centerInside"
+    android:src="@drawable/ic_back"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:background="@color/black" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/movieDetails_tv_back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/sf_pro_display_light"
+    android:text="@string/back"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toBottomOf="@+id/movieDetails_imv_back"
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_imv_back"
+    app:layout_constraintTop_toTopOf="@+id/movieDetails_imv_back"
+    tools:background="@color/black" />
+
+  <ImageView
+    android:id="@+id/movieDetails_imv_share"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:src="@drawable/ic_share"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:background="@color/black" />
+
+  <ImageView
+    android:id="@+id/movieDetails_imv_poster"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:layout_marginTop="10dp"
+    android:src="@drawable/ic_launcher_foreground"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+    android:id="@+id/movieDetails_imv_avatar"
+    android:layout_width="142dp"
+    android:layout_height="214dp"
+    android:layout_marginStart="20dp"
+    android:src="@mipmap/ic_launcher"
+    app:layout_constraintBottom_toBottomOf="@+id/movieDetails_imv_poster"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/movieDetails_imv_poster" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_year"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="2017"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toBottomOf="@+id/movieDetails_imv_avatar"
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_imv_avatar"
+    app:layout_constraintTop_toTopOf="@+id/movieDetails_imv_avatar"
+    app:layout_constraintVertical_bias="0.25"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="justice league"
+    android:textAllCaps="true"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_imv_avatar"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_year"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_duration"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="22dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="2 hour"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_imv_avatar"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_title"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_type"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="Action adventure"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_imv_avatar"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_duration"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_numberReview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="2307"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_imv_avatar"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_type"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_review"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="3dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="Review"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_tv_numberReview"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_type"
+    tools:background="@color/black" />
+
+  <ImageView
+    android:id="@+id/movieDetails_imv_upIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="11dp"
+    android:fontFamily="@font/helveticaneue"
+    android:src="@drawable/ic_polygon"
+    android:text="Review"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    app:layout_constraintStart_toStartOf="@+id/movieDetails_tv_numberReview"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_review"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_uppoint"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="3dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="9"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    app:layout_constraintBottom_toBottomOf="@+id/movieDetails_imv_upIcon"
+    app:layout_constraintStart_toEndOf="@+id/movieDetails_tv_numberReview"
+    app:layout_constraintTop_toTopOf="@+id/movieDetails_imv_upIcon"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_plotSumaryTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="27dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="Plot Summary"
+    android:textColor="@color/white"
+    android:textSize="22sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_uppoint"
+    tools:background="@color/black" />
+
+  <TextView
+    android:id="@+id/movieDetails_tv_plotSumaryDetail"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="27dp"
+    android:layout_marginEnd="20dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne enlists the help of his newfound ally, Diana Prince, to face an even greater enemy..."
+    android:textColor="#666666"
+    android:textSize="18sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_plotSumaryTitle" />
+
+
+  <TextView
+    android:id="@+id/movieDetails_tv_castOverviewTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="27dp"
+    android:fontFamily="@font/helveticaneue"
+    android:text="Cast Overview"
+    android:textColor="@color/white"
+    android:textSize="22sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_plotSumaryDetail"
+    tools:background="@color/black" />
+
+  <ImageView
+    android:id="@+id/movieDetails_tv_castOverviewSample"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="27dp"
+    android:layout_marginEnd="20dp"
+    android:fontFamily="@font/helveticaneue"
+    android:src="@mipmap/ic_launcher"
+    android:textColor="#666666"
+    android:textSize="18sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/movieDetails_tv_castOverviewTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
