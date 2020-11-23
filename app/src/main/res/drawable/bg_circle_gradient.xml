@@ -2,14 +2,14 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape
-            android:shape="rectangle">
+          android:shape="oval">
             <gradient
                 android:type="linear"
                 android:startColor="#F99F00"
                 android:endColor="#DB3069"
                 android:angle="270"
                 />
-            <corners android:radius="10dp"/>
+            <corners android:radius="50dp"/>
         </shape>
     </item>
 </selector>

@@ -1,7 +1,6 @@
 package com.giang.delloitechallenge.moviedetail
 
-import com.giang.delloitechallenge.movieslist.MoviesApi
-import com.giang.delloitechallenge.movieslist.MoviesResponse
+import com.giang.delloitechallenge.movieslist.dto.MoviesResponse
 import okhttp3.OkHttpClient
 import okhttp3.Protocol
 import retrofit2.Retrofit

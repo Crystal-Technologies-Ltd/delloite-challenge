@@ -1,5 +1,6 @@
 package com.giang.delloitechallenge.movieslist
 
+import com.giang.delloitechallenge.movieslist.dto.MoviesResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
