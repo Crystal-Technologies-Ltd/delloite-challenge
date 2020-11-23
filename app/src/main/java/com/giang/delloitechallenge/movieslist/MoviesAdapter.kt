@@ -8,7 +8,7 @@ import com.giang.delloitechallenge.R
 import com.giang.delloitechallenge.databinding.RcvitemMovieBinding
 import com.giang.delloitechallenge.movieslist.dto.Search
 
-class MovieAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MoviesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
   private var dataList: ArrayList<Search> = arrayListOf()
 
   inner class MovieItemVH(private val binding: RcvitemMovieBinding) :

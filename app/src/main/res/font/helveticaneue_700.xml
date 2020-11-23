@@ -3,9 +3,9 @@
   xmlns:app="http://schemas.android.com/apk/res-auto">
   <font
     android:fontStyle="normal"
-    android:fontWeight="500"
+    android:fontWeight="700"
     android:font="@font/helveticaneue"
     app:fontStyle="normal"
-    app:fontWeight="500"
+    app:fontWeight="700"
     />
 </font-family>
