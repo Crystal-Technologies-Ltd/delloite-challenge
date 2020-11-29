@@ -17,5 +17,7 @@ data class Search(
   @SerializedName("Poster")
   val poster: String = "",
 
-  val decorateItem: Boolean? = false
+  val decorateItem: Boolean? = false,
+
+  var onClick: (imdbID: String) -> Unit? = {}
 )

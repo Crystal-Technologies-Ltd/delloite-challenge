@@ -5,14 +5,9 @@
 
   <data>
     <variable
-      name="clickListener"
-      type="android.view.View.OnClickListener" />
-
-    <variable
       name="movieData"
       type="com.giang.delloitechallenge.movieslist.dto.Search" />
   </data>
-
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="168dp"
     android:layout_height="214dp"
@@ -25,7 +20,6 @@
       android:layout_height="match_parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      android:onClick="@{clickListener}"
       app:poster="@{movieData.poster}"
       android:scaleType="center"
       />

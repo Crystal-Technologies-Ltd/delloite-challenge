@@ -19,6 +19,11 @@
     android:id="@+id/fragmentMovieDetails"
     android:name="com.giang.delloitechallenge.moviedetail.MovieDetailFragment"
     android:label="fragmentMovieList"
-    tools:layout="@layout/fragment_movies_detail" />
+    tools:layout="@layout/fragment_movies_detail">
+    <argument
+      android:name="imdbId"
+      app:argType="string" />
+
+  </fragment>
 
 </navigation>

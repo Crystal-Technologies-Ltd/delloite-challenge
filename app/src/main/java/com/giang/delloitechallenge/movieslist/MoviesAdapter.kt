@@ -13,6 +13,14 @@ class MoviesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
   private var dataList: ArrayList<Search> = arrayListOf()
   private val TYPE_ITEM = 1
   private val TYPE_DECORATE = 2
+  private var listener: OnItemClicked? = null
+  fun setOnClickListener(listener: MoviesAdapter.OnItemClicked) {
+    this.listener = listener
+  }
+
+  interface OnItemClicked {
+    fun onItemClicked(imdbId: String)
+  }
 
   inner class DecorateItemVH(itemView: View) : RecyclerView.ViewHolder(itemView) {}
 
@@ -22,10 +30,14 @@ class MoviesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     fun bindData(item: Search) {
       with(binding) {
         movieData = item
+        itemView.setOnClickListener {
+          listener?.onItemClicked(item.imdbID)
+        }
         executePendingBindings()
       }
     }
   }
+
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
     return when (viewType) {
@@ -65,7 +77,9 @@ class MoviesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     dataList.clear()
     dataList = ArrayList(list).also {
       it.add(
-        Search(decorateItem = true)
+        Search(
+          decorateItem = true
+        )
       )
     }
     notifyDataSetChanged()

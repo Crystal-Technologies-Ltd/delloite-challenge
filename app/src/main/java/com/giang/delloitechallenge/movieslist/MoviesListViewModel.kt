@@ -43,7 +43,8 @@ class MoviesListViewModel
     }
   }
 
-  companion object{
+
+  companion object {
     @JvmStatic
     @BindingAdapter("poster")
     fun addImage(imageView: ImageView, imageUrl: String?) {
