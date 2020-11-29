@@ -1,31 +1,15 @@
 package com.giang.delloitechallenge.movieslist
 
 import com.giang.delloitechallenge.movieslist.dto.MoviesResponse
-import okhttp3.OkHttpClient
-import okhttp3.Protocol
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-class MoviesRepo {
-  val httpClient: OkHttpClient = OkHttpClient.Builder()
-    .connectTimeout(5, TimeUnit.SECONDS)
-    .readTimeout(5, TimeUnit.SECONDS)
-    .writeTimeout(5, TimeUnit.SECONDS)
-    .protocols(listOf(Protocol.HTTP_1_1, Protocol.HTTP_2))
-    .build()
+class MoviesRepo @Inject constructor(private val api: MoviesApi) {
 
-  private val retrofit: Retrofit = Retrofit.Builder()
-    .baseUrl("http://www.omdbapi.com/")
-    .client(httpClient)
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-
-  fun createMovieService(retrofit: Retrofit) = retrofit.create(MoviesApi::class.java)
-
-  val apis = createMovieService(retrofit)
-
-  suspend fun getMovies(): MoviesResponse {
-    return apis.getMovies("Marvel", "movie")
+  suspend fun getMovies(): MoviesResponse? {
+    return try {
+      api.getMovies("Marvel", "movie")
+    } catch (ex: Exception) {
+      null
+    }
   }
 }

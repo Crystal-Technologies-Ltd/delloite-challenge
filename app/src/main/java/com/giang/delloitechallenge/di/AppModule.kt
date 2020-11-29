@@ -29,7 +29,7 @@ object AppModule {
   @Singleton
   fun provideRetrofit(client: OkHttpClient): Retrofit =
     Retrofit.Builder()
-      .baseUrl("")
+      .baseUrl("http://www.omdbapi.com")
       .client(client)
       .addConverterFactory(GsonConverterFactory.create())
       .build()
