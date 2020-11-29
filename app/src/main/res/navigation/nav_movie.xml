@@ -10,6 +10,15 @@
     android:name="com.giang.delloitechallenge.movieslist.MoviesListFragment"
     android:label="fragmentMovieList"
     tools:layout="@layout/fragment_movies_list">
+    <action
+      android:id="@+id/to_fragmentMovieDetails"
+      app:destination="@id/fragmentMovieDetails" />
   </fragment>
+
+  <fragment
+    android:id="@+id/fragmentMovieDetails"
+    android:name="com.giang.delloitechallenge.moviedetail.MovieDetailFragment"
+    android:label="fragmentMovieList"
+    tools:layout="@layout/fragment_movies_detail" />
 
 </navigation>
