@@ -25,10 +25,6 @@ class MoviesListFragment : Fragment(R.layout.fragment_movies_list) {
 
     viewModel.movieListLD.observe(viewLifecycleOwner, { res ->
       if (res.isSuccess) {
-        Toast.makeText(
-          requireContext(), "Success! + ${res.movieList.size}",
-          Toast.LENGTH_SHORT
-        ).show()
         (movieList_rcv_movies.adapter as MoviesAdapter).setData(res.movieList as ArrayList<Search>)
       }
     })
