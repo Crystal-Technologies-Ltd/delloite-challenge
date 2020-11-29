@@ -16,14 +16,13 @@
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="168dp"
     android:layout_height="214dp"
-    tools:background="@android:color/darker_gray">
+    android:elevation="2dp"
+    android:background="@android:color/darker_gray">
 
     <ImageView
       android:id="@+id/movie_imv_poster"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:background="@drawable/shadow_rect"
-      android:elevation="2dp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       android:onClick="@{clickListener}"
