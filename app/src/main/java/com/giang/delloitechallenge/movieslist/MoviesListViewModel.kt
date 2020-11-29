@@ -1,9 +1,15 @@
 package com.giang.delloitechallenge.movieslist
 
+import android.graphics.drawable.Drawable
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomViewTarget
+import com.bumptech.glide.request.transition.Transition
 import com.giang.delloitechallenge.movieslist.dto.MoviesResponseUIState
 import com.giang.delloitechallenge.movieslist.dto.Search
 import kotlinx.coroutines.Dispatchers
@@ -36,4 +42,25 @@ class MoviesListViewModel
       }
     }
   }
+
+  companion object{
+    @JvmStatic
+    @BindingAdapter("poster")
+    fun addImage(imageView: ImageView, imageUrl: String?) {
+      Glide
+        .with(imageView.context)
+        .load(imageUrl)
+        .into(object : CustomViewTarget<ImageView, Drawable>(imageView) {
+          override fun onLoadFailed(errorDrawable: Drawable?) {}
+
+          override fun onResourceCleared(placeholder: Drawable?) {}
+
+          override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {
+            imageView.setImageDrawable(resource)
+          }
+
+        })
+    }
+  }
+
 }

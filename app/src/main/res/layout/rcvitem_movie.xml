@@ -14,20 +14,20 @@
   </data>
 
   <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="160dp"
+    android:layout_height="214dp"
     tools:background="@android:color/darker_gray">
 
     <ImageView
       android:id="@+id/movie_imv_poster"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_marginTop="9.8dp"
-      tools:src="@drawable/bg_circle_gradient"
-      android:src="@{movieData.poster}"
+      android:src="@drawable/bg_circle_gradient"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       android:onClick="@{clickListener}"
+      app:poster="@{movieData.poster}"
+      android:scaleType="center"
       />
 
     <ImageView
@@ -51,7 +51,7 @@
       app:layout_constraintHorizontal_bias="0.4"
       app:layout_constraintStart_toStartOf="@+id/movie_imv_circle"
       app:layout_constraintTop_toTopOf="@+id/movie_imv_circle"
-      tools:text="9" />
+      android:text="9" />
 
     <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/movie_tv_decimalPoint"
@@ -66,7 +66,7 @@
       app:layout_constraintStart_toStartOf="@+id/movie_imv_circle"
       app:layout_constraintTop_toTopOf="@+id/movie_imv_circle"
       app:layout_constraintVertical_bias=".2"
-      tools:text=".2" />
+      android:text=".2" />
 
     <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/movie_tv_year"
@@ -79,7 +79,9 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintBottom_toTopOf="@+id/movie_tv_title"
       app:layout_constraintVertical_bias="1"
-      tools:text="2015" />
+      tools:text="2015"
+      android:text="@{movieData.year}"
+      />
 
     <androidx.appcompat.widget.AppCompatTextView
       android:id="@+id/movie_tv_title"
@@ -93,6 +95,7 @@
       app:layout_constraintBottom_toBottomOf="@+id/guideline_bottom"
       app:layout_constraintVertical_bias="1"
       android:textAllCaps="true"
+      android:text="@{movieData.title}"
       tools:text="Batman begin" />
 
     <androidx.constraintlayout.widget.Guideline

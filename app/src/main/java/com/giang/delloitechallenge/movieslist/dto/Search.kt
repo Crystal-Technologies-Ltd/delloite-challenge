@@ -1,8 +1,14 @@
 package com.giang.delloitechallenge.movieslist.dto
 
+import android.graphics.drawable.Drawable
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomViewTarget
+import com.bumptech.glide.request.transition.Transition
 import com.google.gson.annotations.SerializedName
 
-class Search(
+data class Search(
   @SerializedName("Title")
   val title: String,
 
